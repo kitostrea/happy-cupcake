@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>The Happy Cupcake</title>
+		<meta name="description" content="The Happy Cupcake serves delicious and gorgeous cupcakes. We are located in Mesa, AZ. Our cupcakes are happy, and you will be too!">
+        <!-- TO DO: Add your name to the meta author tag -->
+		<meta name="author" content="Kit Ostrea">
+
+        <!-- TO DO: Add the favicon here -->
+		<link rel="shortcut icon" href="images/cupcake.png" type="image/x-icon">
+        <link rel="icon" href="images/cupcake.png" type="image/x-icon"></head>
+        <!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+
+        <!-- JavaScript that runs the carousel -->
+        <script src="carousel.js" defer></script>
+	</head>
+	<body>
+        <a href="#main-content" id="skip">Skip to Main Content</a>
+		<header>
+			<div>
+				<h1><a href="#">The Happy Cupcake</a></h1>
+				<nav>
+					<h2 class="sr-only">Navigation</h2>
+					<ul>
+						<li><a href="index.html" aria-current="page">home</a></li>
+						<li><a href="cupcakes.html">cupcakes</a></li>
+						<li><a href="contact.html">contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main id="main-content">
+			<!-- slideshow on home page -->
+			<section>
+				<h2 class="sr-only">Cupcake Carousel</h2>
+				<div id="slideshow">
+                    <!-- TO DO: Add the cupcake images for the carousel here (there should be six) -->
+                    <!-- For the first image, named "vanilla-bean-carousel.png", the alt text should be "Vanilla Bean Dream Cupcake group on a platter" (you will write the rest of the alt text on the images in this carousel) -->
+
+                    <div id="slideshow-btns">
+                        <!-- I have added the SVG icons for the slideshow controls for you, but they are also from Tabler Icons -->
+                        <button id="prev" aria-label="view previous image">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <polyline points="15 6 9 12 15 18" />
+                            </svg>
+                        </button>
+                        <button id="play" aria-label="Play Slideshow">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M7 4v16l13 -8z" />
+                            </svg>
+                        </button>
+                        <button id="pause" class="hide" aria-label="Pause slideshow">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-pause" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <rect x="6" y="5" width="4" height="14" rx="1" />
+                                <rect x="14" y="5" width="4" height="14" rx="1" />
+                            </svg>
+                        </button>
+                        <button id="next" aria-label="view next image">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <polyline points="9 6 15 12 9 18" />
+                            </svg>
+                        </button>
+                    </div>
+				</div>
+			</section>
+			<section>
+				<h2>Welcome to The Happy Cupcake!</h2>
+				<p>
+					We offer custom, delicious cupcakes that you can enjoy in our bakery or take home to share. All of our baked goods are made fresh daily, and we love hearing customer requests for new flavors. Let us bake for your next gathering, or stop by and enjoy one of our monthly special flavors.
+					<span class="strong">Happy Cupcakes make happy people!</span>
+				</p>
+			</section>
+		</main>
+
+    <footer>
+        <address>
+            <a class="mobile-num link" href="tel:480-555-1234">(480)-555-1234</a>
+            <span class="desktop-num link">(480)-555-1234</span>
+            <a  class="email-link" href="mailto:contact@thehappycupcake.com">contact@theHappyCupcake.com</a>
+        </address>
+        <section class="social-media-icons">
+            <h2 class="sr-only">Follow Us on Social Media</h2>
+            <a href="http://www.instagram.com" aria-label="Find us on Instagram">
+                <!-- TO DO: Add the Tabler icon for Instagram inside of this link -->
+                
+            </a>
+            <a href="http://www.facebook.com" aria-label="Find us on Facebook">
+                <!-- TO DO: Add the Tabler icon for Facebook inside of this link -->
+                
+            </a>
+        </section>
+        <p>Copyright &copy; 2024</p>
+    </footer>
+</body>
+</html>

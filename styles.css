@@ -1,0 +1,439 @@
+/* 
+    http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ----- GLOBAL/MOBILE STYLES ----- */
+/* ----- ROOT STYLES ----- */
+:root{
+    --wht: #fff;
+    --dk-gray: #222;
+    --med-gray: #555;
+    --lt-gray: #eaeaea;
+    --gray-rgba: rgb(34 34 34 / 0.90);
+
+    /* Color Palette from ColorMind.io */
+    --snow: #f7f9f8;
+    --lt-blush: #edb6b7;
+    --med-blush-1: #e07b84;
+    --med-blush-2: #e17281;
+    --deep-blush: #af5464;
+
+    /* Old Site Colors - too pale for contrast */
+    --pink: #f4c9c3;
+    --blue: #bdecfc;
+
+    --fonts: 'Montserrat', sans-serif;
+}
+
+/* ----- BODY STYLES ----- */
+body{
+    font-family: var(--fonts);
+    line-height: 1.5em;
+    box-sizing: border-box;
+    color: var(--dk-gray);
+    font-size: 1rem;
+}
+
+/* ----- SKIP LINK STYLES FROM WEB-AIM ----- */
+#skip{
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+#skip:focus{
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	font-size: 1.1rem;
+	font-weight: bold;
+	outline: 2px solid var(--deep-blush);
+    margin-bottom: 4px;
+}
+
+/* ----- hidden content styles - for screen readers ----- */
+/* found here: https://webaim.org/techniques/css/invisiblecontent/ */
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* ----- HEADER/FOOTER STYLES ----- */
+header, footer{
+    background-color: var(--dk-gray);
+    padding: 16px;
+    width: calc(100% - 32px);
+    color: var(--snow);
+}
+
+/* ----- HEADER STYLES ----- */
+header div{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* ----- LINK STYLES ----- */
+a{
+    display: block;
+    padding: 16px;
+    color: var(--dk-gray);
+}
+
+a:hover{
+    text-decoration: 2px solid underline var(--deep-blush);
+}
+
+a:focus{
+    outline: 2px solid var(--deep-blush);
+    outline-offset: 2px;
+}
+
+h1 a{
+    color: var(--snow);
+    text-decoration: none;
+    transition: all 500ms;
+}
+
+h1 a:hover{
+    text-decoration: 4px solid underline var(--deep-blush);
+}
+
+/* ----- NAV STYLES ----- */
+nav a{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--snow);
+    text-decoration: none;
+    transition: all 500ms;
+}
+
+nav a:hover, a[aria-current=page]{
+    text-decoration: 4px solid underline var(--deep-blush);
+}
+
+/* ----- HEADING STYLES ----- */
+h1, h2, h3{
+    font-weight: 800;
+    text-align: center;
+    line-height: 1.35;
+}
+
+h1{
+    font-size: 2rem;
+    margin: 16px 0;
+}
+
+h2{
+    font-size: 1.75rem;
+    margin: 12px 0;
+}
+
+h3{
+    font-size: 1.5rem;
+    margin: 8px 0;
+}
+
+/* ----- TEXT STYLES ----- */
+p{
+    width: 100%;
+    max-width: 60ch;
+    margin: 0 auto;
+    padding: 16px 0;
+}
+
+p span{
+    font-weight: bold;
+}
+
+.strong{
+    display: block;
+    margin: 16px 0 4px;
+    font-size: 1.2rem;
+}
+
+strong{
+    font-weight: 700;
+}
+
+/* ----- MAIN STYLES ----- */
+main{
+    padding: 16px;
+    width: calc(100% - 32px);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ----- IMAGE STYLES ----- */
+img, svg{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+svg{
+    stroke: var(--snow);
+}
+
+/* ----- CAROUSEL STYLES ----- */
+#slideshow{
+	width: 100%;
+	max-width: 1000px;
+	margin: 16px auto;
+	position: relative;
+}
+
+#slideshow img{
+	padding: 0;
+	margin: 16px auto;
+	width: 100%;
+}
+
+#slideshow-btns{
+	display: flex;
+	justify-content: space-between;
+    max-width: 300px;
+    margin: 8px auto 16px;
+}
+
+#prev, #next, #play, #pause{
+	display: block;
+	width: fit-content;
+	margin: 0;
+	padding: 10px 8px;
+	border: none;
+	border-radius: 50%;
+	background-color: var(--lt-blush);
+	position: relative;
+	/* filter: var(--filter-shadow); */
+	transition: 300ms transform ease-in-out;
+}
+
+#prev:hover, #next:hover, #play:hover, #pause:hover{
+	transform: scale(105%);
+}
+
+#prev:focus, #next:focus, #play:focus, #pause:focus{
+	outline: 4px solid var(--deep-blush);
+    outline-offset: 2px;
+}
+
+#play.hide, #pause.hide{
+	display: none;
+}
+
+#slideshow-btns svg{
+	stroke: var(--dk-gray);
+	stroke-width: 3px;
+	height: 30px;
+	width: 35px;
+}
+
+.hide{
+	display: none;
+}
+
+/* ----- CUPCAKES PAGE STYLES ----- */
+
+#cupcakes{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cupcake{
+    width: 100%;
+    max-width: 320px;
+    margin: 16px auto;
+    position: relative;
+}
+
+.cupcake-name{
+    border: none;
+    display: block;
+    width: 100%;
+    background-color: var(--dk-gray);
+    color: var(--snow);
+    padding: 32px 0;
+    font-family: var(--fonts);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.cupcake div{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background-color: var(--gray-rgba);
+    color: var(--snow);
+    padding: 16px;
+    width: calc(100% - 32px);
+    height: 82%;
+}
+
+/* ----- FOOTER STYLES ----- */
+footer{
+    text-align: center;
+}
+
+footer a{
+    color: var(--snow);
+}
+
+footer address{
+    width: 100%;
+    max-width: 275px;
+    margin: 0 auto;
+}
+
+address a{
+    padding: 16px 0;
+}
+
+.social-media-icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    width: 200px;
+    margin: 16px auto;
+}
+
+.social-media-icons a{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--med-blush-1);
+    text-decoration: none;
+    transition: all 500ms;
+}
+
+.social-media-icons a:hover{
+    background-color: var(--dk-gray);
+}
+
+.social-media-icons a:hover svg{
+    stroke: var(--deep-blush);
+}
+
+.desktop-num{
+    display: none;
+}
+
+/* ----- MEDIA QUERIES ----- */
+/* ----- SMALL SCREEN QUERY ----- */
+@media screen and (min-width: 550px){
+    nav ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+
+    .strong{
+        text-align: center;
+        margin: 16px auto;
+    }
+}
+
+/* ----- MEDIUM SCREEN QUERIES ----- */
+@media screen and (min-width: 650px){
+    #cupcakes{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin-bottom: 32px;
+        justify-items: center;
+    }
+    
+    #cupcakes h2, #cupcakes > p{
+        grid-column: 1/-1;
+    }
+
+    .cupcake{
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 800px){
+    header{
+        padding: 32px 16px;
+    }
+
+    header div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        align-items: center;
+    }
+
+    h1{
+        text-align: left;
+    }
+
+    nav ul{
+        margin-bottom: 0;
+    }
+
+    #cupcakes{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
